@@ -53,10 +53,10 @@ $(document).ready(function() {
 
     $('.sub-sliders .owl-carousel').owlCarousel({
         loop: true,
-        autoplay: true,
+        // autoplay: true,
         autoplayTimeout: 4000,
         margin: 30,
-        stagePadding: 5,
+        // stagePadding: 5,
         rtl: true,
         navText: ["<span class='lnr lnr-chevron-right'></span>", "<span class='lnr lnr-chevron-left'></span>"],
         responsiveClass: true,
@@ -118,6 +118,9 @@ $(document).ready(function() {
         });
     } else {
         $(".slide-list").addClass("in")
+        $('.footer-link').on('click', function(e) {
+            e.stopPropagation();
+        });
     }
     //This is To Change between footer collapse link ----------------------------------------------------------------
     // First Collapse ---------------------------
